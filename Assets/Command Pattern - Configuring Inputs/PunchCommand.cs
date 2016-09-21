@@ -3,13 +3,13 @@ using System.Collections;
 
 class PunchCommand : Command
 {
-    public override void Execute()
+    public override void Execute(GameObject actor)
     {
-        Punch();
+        Punch(actor);
     }
 
-    void Punch()
+    void Punch(GameObject actor)
     {
-        System.Console.WriteLine("Call Punch");
+       Debug.Log(actor.name + " is calling Punch");
     }
 }

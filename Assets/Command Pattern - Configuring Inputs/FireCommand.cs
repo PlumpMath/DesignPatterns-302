@@ -3,13 +3,13 @@ using System.Collections;
 
 class FireCommand : Command
 {
-    public override void Execute()
+    public override void Execute(GameObject actor)
     {
-        Fire();
+        Fire(actor);
     }
 
-    void Fire()
+    void Fire(GameObject actor)
     {
-        System.Console.WriteLine("Call Fire");
+        Debug.Log(actor.name + " is calling Fire");
     }
 }

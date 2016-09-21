@@ -3,13 +3,13 @@ using System.Collections;
 
 class RollCommand : Command
 {
-    public override void Execute()
+    public override void Execute(GameObject actor)
     {
-        Roll();
+        Roll(actor);
     }
 
-    void Roll()
+    void Roll(GameObject actor)
     {
-        System.Console.WriteLine("Call Roll");
+        Debug.Log(actor.name + " is calling Roll");
     }
 }

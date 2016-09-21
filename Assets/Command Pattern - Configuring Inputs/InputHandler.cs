@@ -10,14 +10,20 @@ class InputHandler : MonoBehaviour
 
     void Update()
     {
-        HandleInput();
+        Command command = HandleInput();
+
+        if(command != null)
+            command.Execute(this.gameObject);
+      
     }
 
-    void HandleInput()
+    Command HandleInput()
     {
-        if (Input.GetButtonDown("BUTTON_X"))        button_X.Execute();
-        else if (Input.GetButtonDown("BUTTON_Y"))   button_Y.Execute();
-        else if (Input.GetButtonDown("BUTTON_A"))   button_A.Execute();
-        else if (Input.GetButtonDown("BUTTON_B"))   button_B.Execute();
+        if      (Input.GetButtonDown("X Button"))   return button_X;
+        else if (Input.GetButtonDown("Y Button"))   return button_Y;
+        else if (Input.GetButtonDown("A Button"))   return button_A;
+        else if (Input.GetButtonDown("B Button"))   return button_B;
+
+        return null;
     }
 }

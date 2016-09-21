@@ -3,13 +3,13 @@ using System.Collections;
 
 class JumpCommand : Command
 {
-    public override void Execute()
+    public override void Execute(GameObject actor)
     {
-        Jump();
+        Jump(actor);
     }
 
-    void Jump()
+    void Jump(GameObject actor)
     {
-        System.Console.WriteLine("Call Jump");
+       Debug.Log(actor.name + " is calling Jump");
     }
 }
