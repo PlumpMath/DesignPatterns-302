@@ -10,6 +10,7 @@ class JumpCommand : Command
 
     void Jump(GameObject actor)
     {
-       Debug.Log(actor.name + " is calling Jump");
+        GenericUIManager.ChangeText(this.GetType().Name);
+        GenericUIManager.SetTextColor(Color.green);
     }
 }

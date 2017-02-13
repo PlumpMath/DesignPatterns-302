@@ -10,6 +10,7 @@ class RollCommand : Command
 
     void Roll(GameObject actor)
     {
-        Debug.Log(actor.name + " is calling Roll");
+        GenericUIManager.ChangeText(this.GetType().Name);
+        GenericUIManager.SetTextColor(Color.yellow);
     }
 }

@@ -10,6 +10,7 @@ class PunchCommand : Command
 
     void Punch(GameObject actor)
     {
-       Debug.Log(actor.name + " is calling Punch");
+        GenericUIManager.ChangeText(this.GetType().Name);
+        GenericUIManager.SetTextColor(Color.cyan);
     }
 }

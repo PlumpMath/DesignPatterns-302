@@ -10,6 +10,7 @@ class FireCommand : Command
 
     void Fire(GameObject actor)
     {
-        Debug.Log(actor.name + " is calling Fire");
+        GenericUIManager.ChangeText(this.GetType().Name);
+        GenericUIManager.SetTextColor(Color.red);
     }
 }
