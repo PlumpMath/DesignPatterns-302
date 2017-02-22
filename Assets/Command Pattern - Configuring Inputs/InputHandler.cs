@@ -13,8 +13,7 @@ class InputHandler : MonoBehaviour
         Command command = HandleInput();
 
         if(command != null)
-            command.Execute(this.gameObject);
-      
+            command.Execute(this.gameObject);   
     }
 
     Command HandleInput()
